@@ -10,3 +10,8 @@ app.listen(port, function(){
 app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, './index.html'));
 });
+
+app.post('/', function(req, res) {
+  console.log('received a post request!');
+  res.sendStatus(204);
+});
